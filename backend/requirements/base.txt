@@ -1,0 +1,16 @@
+aioredis
+alembic
+bcrypt
+databases[asyncpg]
+orjson
+psycopg2
+asyncpg
+python-jose
+SQLAlchemy
+httpx
+
+pydantic[email]
+fastapi
+uvicorn[standard]
+
+sentry-sdk
