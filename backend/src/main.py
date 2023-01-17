@@ -8,6 +8,7 @@ from src.core.db import database
 from src.core import redis
 
 from src.auth.router import router as auth_router
+from src.jobs.router import router as jobs_router
 
 app = FastAPI(**app_configs)
 
@@ -48,3 +49,4 @@ async def healthcheck() -> dict[str, str]:
 
 
 app.include_router(auth_router, prefix="/auth", tags=["Auth"])
+app.include_router(jobs_router, prefix="/jobs", tags=["Jobs"])

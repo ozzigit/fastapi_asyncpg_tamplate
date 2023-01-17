@@ -31,3 +31,7 @@ class NotAuthenticated(DetailedHTTPException):
 
     def __init__(self) -> None:
         super().__init__(headers={"WWW-Authenticate": "Bearer"})
+
+
+class RowIsPresent(BadRequest):
+    DETAIL = "Row is already exist in table"
