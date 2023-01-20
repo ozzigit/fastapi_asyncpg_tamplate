@@ -7,8 +7,8 @@ from src.core.config import app_configs, settings
 from src.core.db import database
 from src.core import redis
 
-from src.auth.router import router as auth_router
-from src.jobs.router import router as jobs_router
+# from src.auth.router import router as auth_router
+from src.tables.router import router as tables_router
 
 app = FastAPI(**app_configs)
 
@@ -48,5 +48,5 @@ async def healthcheck() -> dict[str, str]:
     return {"status": "ok"}
 
 
-app.include_router(auth_router, prefix="/auth", tags=["Auth"])
-app.include_router(jobs_router, prefix="/jobs", tags=["Jobs"])
+# app.include_router(auth_router)
+app.include_router(tables_router)

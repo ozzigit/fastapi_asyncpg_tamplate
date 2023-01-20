@@ -8,7 +8,7 @@ asyncpg
 python-jose
 SQLAlchemy
 httpx
-
+strawberry-graphql[fastapi]
 pydantic[email]
 fastapi
 uvicorn[standard]
